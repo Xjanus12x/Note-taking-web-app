@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import useDebounce from "../hooks/useDebounce";
 import Icon from "./icons";
 import Input from "./Input";
 import { useBreakpoints } from "../hooks/useBreakpoints";
-import { q } from "framer-motion/client";
 
 type SearchType = "tag" | "query";
 type SearchBarProps = {
