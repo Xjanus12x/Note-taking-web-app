@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0, 0%, 100%;
+    --background-2: 216, 26%, 96%;
+    --background-3: 216, 19%, 90%;
+    --background-4: 228, 100%, 60%;
+    --background-5: 228, 100%, 60%, 0.8;
+    --border: 214.3 31.8% 91.4%;
+    --border-2: 216, 19%, 90%;
+    --border-3: 216, 19%, 90%;
+    --color: 221, 16%, 20%;
+    --color-2: 222, 32%, 8%;
+    --color-3: 0, 0%, 100%;
+    --color-4: 221, 16%, 20%;
+  }
+  :root div[data-theme="dark"] {
+    --background: 222, 32%, 8%;
+    --background-2: 231, 16%, 16%;
+    --background-3: 216, 19%, 90%;
+    --background-4: 228, 100%, 60%;
+    --background-5: 228, 100%, 60%, 0.5;
+    --border: 217.2 32.6% 17.5%;
+    --border-2: 216, 19%, 90%;
+    --border-3: 221, 16%, 20%;
+    --color: 216, 19%, 90%;
+    --color-2: 222, 32%, 8%;
+    --color-3: 0, 0%, 100%;
+    --color-4: 219, 15%, 82%;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 222, 32%, 8%;
+      --background-2: 231, 16%, 16%;
+      --background-3: 216, 19%, 90%;
+      --background-4: 228, 100%, 60%;
+      --border: 217.2 32.6% 17.5%;
+      --border-2: 216, 19%, 90%;
+      --border-3: 221, 16%, 20%;
+      --color: 216, 19%, 90%;
+      --color-2: 222, 32%, 8%;
+      --color-3: 0, 0%, 100%;
+      --color-4: 219, 15%, 82%;
+    }
+  }
+}
+
+div[data-font="sans-serif"] {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+div[data-font="noto-serif"] {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+div[data-font="source-code-pro"] {
+  font-family: "Source Code Pro", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
