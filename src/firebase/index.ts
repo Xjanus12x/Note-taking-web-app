@@ -1,18 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-// import { FirebaseConfig } from "../../config";
-const firebaseConfig = {
-  apiKey: "AIzaSyA5WPN0Nj0rLVc8fgIOuoazmT2zB_TxDxo",
-  authDomain: "note-taking-web-app-e627a.firebaseapp.com",
-  projectId: "note-taking-web-app-e627a",
-  storageBucket: "note-taking-web-app-e627a.firebasestorage.app",
-  messagingSenderId: "91053296827",
-  appId: "1:91053296827:web:502b8186e787a05e87ad9e",
-};
 
-export const provider = new GoogleAuthProvider();
+export const provider = new GoogleAuthProvider(); // Firebase configuration using environment variables
+
+const firebaseConfig = {
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+};
 
 // Initialize Firebase
 export const MainFirebaseApp = initializeApp(firebaseConfig);
@@ -20,4 +19,3 @@ export const MainFirebaseApp = initializeApp(firebaseConfig);
 export const FirebaseAuth = getAuth(MainFirebaseApp);
 
 // export const FirebaseFirestore = getFirestore(MainFirebaseApp);
-
